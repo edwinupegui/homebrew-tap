@@ -5,13 +5,13 @@
 class Arsenal < Formula
   desc "Local-first manager for curated technical resources (CLI + TUI + web)"
   homepage "https://github.com/edwinupegui/arsenal"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edwinupegui/arsenal/releases/download/v0.2.0/arsenal_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "9108e8cab2975597bebbe11b023e6c2b37a4410734502525b30e23c9980ee578"
+      url "https://github.com/edwinupegui/arsenal/releases/download/v0.3.0/arsenal_0.3.0_darwin_x86_64.tar.gz"
+      sha256 "92aba74e496dc9eaeeb49d101bb3743231d843b7c3e2b9b00c6569e0c497be33"
 
       define_method(:install) do
         bin.install "arsenal"
@@ -19,8 +19,8 @@ class Arsenal < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/edwinupegui/arsenal/releases/download/v0.2.0/arsenal_0.2.0_darwin_arm64.tar.gz"
-      sha256 "5bcf681204ec8a824efbab7a38aab6b1871f5116c7d68d8f0a39914a9a722a71"
+      url "https://github.com/edwinupegui/arsenal/releases/download/v0.3.0/arsenal_0.3.0_darwin_arm64.tar.gz"
+      sha256 "ca7a6a3566a721ee422c7a0609cef658f9812ea09bffbaeb8cf263e56329279a"
 
       define_method(:install) do
         bin.install "arsenal"
@@ -31,16 +31,16 @@ class Arsenal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edwinupegui/arsenal/releases/download/v0.2.0/arsenal_0.2.0_linux_x86_64.tar.gz"
-      sha256 "e98516b0df06684e526be749b78cef2d8aa40f2da16d3808c7b43d60acbda5f8"
+      url "https://github.com/edwinupegui/arsenal/releases/download/v0.3.0/arsenal_0.3.0_linux_x86_64.tar.gz"
+      sha256 "12bc2e1e9e85a8d35e5c7269de772cbd0e50dd0e1fe0098fb44adba51abacba5"
       define_method(:install) do
         bin.install "arsenal"
         generate_completions_from_executable(bin/"arsenal", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edwinupegui/arsenal/releases/download/v0.2.0/arsenal_0.2.0_linux_arm64.tar.gz"
-      sha256 "08071e28bd9dd5e66085734cb2abfdd414cf93d85e213abb9f7c270a4990e228"
+      url "https://github.com/edwinupegui/arsenal/releases/download/v0.3.0/arsenal_0.3.0_linux_arm64.tar.gz"
+      sha256 "1b35df52b10fb09ad9b790e7a288904821404df3945f2f22686db69ec317fa14"
       define_method(:install) do
         bin.install "arsenal"
         generate_completions_from_executable(bin/"arsenal", "completion")
